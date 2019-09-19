@@ -1,0 +1,43 @@
+
+shiro开山篇
+
+
+
+authentication 认证, authorization 授权,  foremost goal 首要的 目标 , intuitive API 简洁直观的 api,
+mask complexities 掩盖 复杂性
+
+shiro特性:
+
+Authentication: Sometimes referred to as ‘login’, this is the act of proving a user is who
+they say they are.
+身份验证：有时称为“登录”，这是证明用户是他们所说的人的行为。
+
+Authorization: The process of access control, i.e. determining ‘who’ has access to ‘what’.
+授权：访问控制的过程，即确定“谁”可以访问“什么”。
+
+Session Management: Managing user-specific sessions, even in non-web or EJB applications.
+会话管理：即使在非Web或EJB应用程序中，也可以管理特定于用户的会话。
+
+Cryptography: Keeping data secure using cryptographic algorithms while still being easy to use.
+密码学：使用加密算法保持数据安全，同时仍然易于使用。
+
+Web Support: Shiro’s web support APIs help easily secure web applications.
+Web支持：Shiro的Web支持API可帮助轻松保护Web应用程序。
+
+Caching: Caching is a first-tier citizen in Apache Shiro’s API to ensure that security operations remain fast and efficient.
+缓存：缓存是Apache Shiro API中的第一层公民，可确保安全操作保持快速高效。
+
+Concurrency: Apache Shiro supports multi-threaded applications with its concurrency features.
+并发：Apache Shiro支持具有并发功能的多线程应用程序。
+
+Testing: Test support exists to help you write unit and integration tests and ensure your code will be secured as expected.
+测试：存在测试支持以帮助您编写单元和集成测试，并确保您的代码按预期受到保护。
+
+“Run As”: A feature that allows users to assume the identity of another user (if they are allowed), sometimes useful in administrative scenarios.
+“运行方式”：允许用户假定其他用户的身份（如果允许）的功能，有时在管理方案中很有用。
+
+“Remember Me”: Remember users’ identities across sessions so they only need to log in when mandatory.
+“记住我”：记住用户在会话中的身份，因此他们只需要在必要时登录。
+
+客观的  objective
+主观的  subjective

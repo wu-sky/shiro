@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="iniRealm" class="org.apache.shiro.realm.text.IniRealm">
+    <constructor-arg name="resourcePath" value="classpath:shiro-web.ini"/>
+  </bean>
+
+  <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+    <property name="realm" ref="iniRealm"/>
+  </bean>
+
+  <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+    <property name="securityManager" ref="securityManager"/>
+    <property name="loginUrl" value="/goLogin.do"/>
+    <property name="successUrl" value="/index.do"/>
+    <property name="unauthorizedUrl" value="/error.do"/>
+    <property name="filterChainDefinitions">
+      <value>
+        /login.do=anon
+        /goLogin.do=anon
+        /index.do=authc
+        /role/*.do=authc, roles[admin]
+        /menu/*.do=authc, roles[admin], perms[menu:*]
+      </value>
+    </property>
+  </bean>
+
+
+
+</beans>
